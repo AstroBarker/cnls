@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{times}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ...
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{epstopdf}
+\usepackage{wrapfig}
+\usepackage[compress]{natbib}
+%\usepackage[demo]{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+%\usepackage[square,comma,numbers,sort]{natbib}
+% \bibpunct{(}{)}{;}{a}{}{,} % to follow the A&A style
+\usepackage[pdftex, plainpages=false, colorlinks=true, linkcolor=blue, citecolor=blue, bookmarks=false]{hyperref}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{sectsty}
+\usepackage{url}
+\usepackage{lipsum}
+\usepackage[tiny,compact]{titlesec}
+\usepackage{fancyhdr}
+%\usepackage{deluxetable}
+%OG
+%\usepackage[font=footnotesize,labelfont=bf]{caption}
+%NEW
+\usepackage[font=normalsize,labelfont=bf]{caption}
+
+
+\usepackage{verbatim}
+\usepackage[super]{nth}
+\usepackage{enumitem}
+\usepackage{bbding}
+
+\setlength{\textwidth}{6.5in}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+\setlength{\topmargin}{-0.5in}
+\setlength{\headheight}{0.2in}
+\setlength{\headsep}{0.2in}
+\setlength{\textheight}{9.in}
+%\setlength{\footskip}{-0.2in}
+%\setlength{\voffset}{0.0in}
+%\setlength{\tabcolsep}{1pt}
+
+\newcommand{\todo}[1]{{\color{red}$\blacksquare$~\textsf{[TODO: #1]}}}
+
+% The Title of this Whole Thing
+\newcommand{\doctitle}{Neutrinos in Collapsars}
+
+\sectionfont{\normalsize}
+\subsectionfont{\normalsize}
+\subsubsectionfont{\normalsize}
+\singlespacing
+
+\pagestyle{fancy}
+\fancyhf{}
+%\renewcommand{\headrulewidth}{0pt}
+
+%header info
+\lhead{\fancyplain{}{\doctitle}}
+\rhead{\fancyplain{}{Brandon Barker, Jonah Miller}}
+\rfoot{\fancyplain{}{\thepage}}
+
+\bibliographystyle{aasjournal}
+% \bibliographystyle{nsf}
+%\bibliographystyle{abbrv}
+%\bibliographystyle{physrev}
+
+%removes bib label%
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
+
+\input macros.tex
+\input journal_abbr.tex
+
+%\titlespacing*{\section}{0in}{0.2in}{0in}
+%\titlespacing*{\subsection}{0in}{0.1in}{0in}
+\titleformat*{\subsection}{\itshape}
+%\titlespacing*{\subsubsection}{0in}{0.in}{0in}
+\titleformat*{\subsubsection}{\itshape}
+\setlength{\abovecaptionskip}{3pt}
+
+\begin{document}
+
+\setcounter{page}{1} \pagenumbering{arabic} \renewcommand{\thepage}
+           {\arabic{page} }%\pagestyle{plain}
+
+\begin{center}
+{\bf Uncovering the Impact of Relativity on Core-collapse Supernova Signals} \vspace{-0.15in}
+%\section*{Project Narrative}
+\end{center}
+
+%\begin{center}
+%    Michael A. Pajkos\\
+%\end{center}
+
+% \section{Preparation and Past Research}
+
+% \subsection{Overview}
+
+Discerning the origins of the elements has been an active area of research ... \textcolor{red}{forever}.
+We now know that the primary elemental production sites are astrophysical in nature.
+Throughout their lifetimes, stars ...
+
+\newpage
+
+\setcounter{page}{1} \pagenumbering{arabic} \renewcommand{\thepage}
+           {Bibliography -- \arabic{page}}
+
+\renewcommand\bibsection{\section*{References}}
+\setlength{\bibsep}{2pt}
+\bibliography{ProjectNarrative}
+
+
+\end{document}

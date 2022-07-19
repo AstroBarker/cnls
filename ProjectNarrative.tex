@@ -112,19 +112,25 @@ Above this, elements are produced by more exoxtic means.
 Chief among them is the so-called rapid neutron capture process (r-process), whose's astrophysical site of origin is still an area of active study.
 It is recently been shown that the r-process occurs in the mergers of two neutron stars \textcolor{red}{cite}, but evidence suggests that another site may be needed \textcolor{red}{cite}.
 One proposed site is a collapsar -- the product of the collapse of a massive star producing a black hole in its core \textcolor{red}{cite, siegel, barnes, metzger}.
-These systems, which include a black hole inside of a massive star accreting onto it, may produce conditions amenable to forming r-process elements.
-It has been shown that, under certain assumptions, the r-process can be formed in collapsars.
+These systems, which include a black hole inside of a massive star accreting onto it, are not so unlike the conditions present in a neutron star merger and may produce conditions amenable to forming r-process elements.
+It has been shown that, under certain assumptions, r-process elements can be formed in collapsars.
 
 % how to say this? better to use fermions than electrons?
 Critical ingredients to any nucleosynthesis calculation are the fractions of available electrons and hadrons in the matter.
 These are governed, in part, by neutrino phsyics whose ineractions transmute the matter whose ineractions modify the availabe hadrons in the matter.
-It is common in studies of collapsar nucleosynthesis to minimalize neutrino transport to a so-called leakage scheme \textcolor{red}{cite}, but this misses many of the critical processes in setting the state for nucleosynthesis.
+It is common in studies of collapsar nucleosynthesis to minimalize neutrino transport to a so-called leakage scheme \textcolor{red}{cite}, but this trivializes the transport to a simple ``lightbulb'' scheme and critical processes in setting the radiation field are missed.
 Recently, it has been shown that higher fidelity neutrino physics may alter the nucleosynthesis \textcolor{red}{cite, jonah}.
-... jonah paper ...
+The extent to which how and where high fidelity neutrino transport impacts the outcomes of a collapsar is still relatively uncertain.
+A systematic landscape study, varying both collapsar parameters and neutrino transport fidelity, is needed to fully understand to impacts of neutirno transport fidelity on collapsar outcomes. 
 
-I propose \dots
+Using the new 3D general relativistic radiation magnetohydrodynamic (GRRMHD) code Pheobus currently in development at Los Alamos National Laboratory (LANL), I will  perform a suite of collapsar simulations with varying neutrino transport implementations.
+Pheobus currently includes several transport schemes from the simple leakage scheme to a highly accurate Monte Carlo method.
+This code is built upon the performance portable adaptive mesh refinement (AMR) software Parthenon \textcolor{red}{cite}, developed at LANL, and is highly performant.
+By incementally varying the neutrino transport algorithms, these simulations will reveal systematic effects of the impact of neutirno transport on collapsar outcomes, focusing on nucleosynthesis and accretion disk dynamics.
 
-.. LANL is amazing...
+The expertise at LANL, both astrophysical and computational, makes it the ideal setting to perform this study. 
+Moreover, 3D simulations are generally prohibitively computationally expensive, restricting studies such as this.
+Phoebus, being built on the highly performant AMR library Parthenon, will allow us to push the limit of computational expensive down to new levels. % this sounds weird and cheesey 
 
 % Throughout their lifetimes, stars create heavier and heavier elements in their cores, powering the spectacular views that we see in the night sky.
 % Once these stars exhaust their fuel at the ends of their lives, the heavy elements that they created are returned to the interstellar medium to enrich the next generation of stars.

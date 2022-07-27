@@ -71,9 +71,9 @@
 %\bibliographystyle{physrev}
 
 %removes bib label%
-\makeatletter
-\renewcommand\@biblabel[1]{}
-\makeatother
+%\makeatletter
+%\renewcommand\@biblabel[1]{}
+%\makeatother
 
 \input macros.tex
 \include{journal_abbr}
@@ -106,31 +106,33 @@
 % is this intro section too long..? not enough details??
 Discerning the origins of the elements (nucleosynthesis) has been an active area of investigation dating back to the earliest civilizations.
 We now know that the primary elemental production sites are astrophysical in nature.
-Most of the naturally occuring elements heavier than Helium are known to originate from the deaths of stars \textcolor{red}{cite} \citep{mezzacappa:2001}.
-This accounts for most of the elements up to \textcolor{red}{what's the r-process lower boundary?}.
+Most of the naturally occuring elements heavier than Helium are known to originate from the deaths of stars \citep{burbidge:1957}.
+This accounts for most of the elements up to iron.
 Above this, elements are produced by more exoxtic means.
-Chief among them is the so-called rapid neutron capture process (r-process), whose's astrophysical site of origin is still an area of active study.
-It is recently been shown that the r-process occurs in the mergers of two neutron stars \textcolor{red}{cite}, but evidence suggests that another site may be needed \textcolor{red}{cite}.
-One proposed site is a collapsar -- the product of the collapse of a massive star producing a black hole in its core \textcolor{red}{cite, siegel, barnes, metzger}.
+Chief among them is the so-called rapid neutron capture process (r-process), whose's astrophysical site of origin is still an area of active interdisciplinary study \citep{horowitz:2019}.
+It has recently been shown that the r-process occurs in the mergers of two neutron stars \citep{abbott:2017a}, but evidence suggests that another site may be needed \citep{martinez-pinedo:2014}.
+One proposed site is a collapsar -- the product of the collapse of a massive star producing a black hole in its core \citep{siegel:2019}.
 These systems, which include a black hole inside of a massive star accreting onto it, are not so unlike the conditions present in a neutron star merger and may produce conditions amenable to forming r-process elements.
 It has been shown that, under certain assumptions, r-process elements can be formed in collapsars.
 
 % how to say this? better to use fermions than electrons?
 Critical ingredients to any nucleosynthesis calculation are the fractions of available electrons and hadrons in the matter.
-These are governed, in part, by neutrino phsyics whose ineractions transmute the matter whose ineractions modify the availabe hadrons in the matter.
-It is common in studies of collapsar nucleosynthesis to minimalize neutrino transport to a so-called leakage scheme \textcolor{red}{cite}, but this trivializes the transport to a simple ``lightbulb'' scheme and critical processes in setting the radiation field are missed.
-Recently, it has been shown that higher fidelity neutrino physics may alter the nucleosynthesis \textcolor{red}{cite, jonah}.
-The extent to which how and where high fidelity neutrino transport impacts the outcomes of a collapsar is still relatively uncertain.
-A systematic landscape study, varying both collapsar parameters and neutrino transport fidelity, is needed to fully understand to impacts of neutirno transport fidelity on collapsar outcomes. 
+These are governed, in part, by neutrino phsyics whose interactions modify the availabe hadrons in the matter.
+It is common in studies of collapsar nucleosynthesis to minimalize neutrino transport to a so-called leakage scheme \citep{siegel:2019}, but this trivializes the transport to a simple ``lightbulb'' and critical effects in setting the radiation field are missed.
+Recently, it has been shown that higher fidelity neutrino physics may alter the nucleosynthesis and dynamics in the collapsar \citep{miller:2020}.
+However, the extent to which how and where high fidelity neutrino transport impacts the outcomes of a collapsar is still relatively uncertain.
+A systematic landscape study, varying both collapsar parameters and neutrino transport fidelity, is needed to fully understand the impacts of neutirno transport fidelity on collapsar outcomes. 
 
 Using the new 3D general relativistic radiation magnetohydrodynamic (GRRMHD) code Pheobus currently in development at Los Alamos National Laboratory (LANL), I will  perform a suite of collapsar simulations with varying neutrino transport implementations.
 Pheobus currently includes several transport schemes from the simple leakage scheme to a highly accurate Monte Carlo method.
-This code is built upon the performance portable adaptive mesh refinement (AMR) software Parthenon \textcolor{red}{cite}, developed at LANL, and is highly performant.
-By incementally varying the neutrino transport algorithms, these simulations will reveal systematic effects of the impact of neutirno transport on collapsar outcomes, focusing on nucleosynthesis and accretion disk dynamics.
+This code is built upon the performance portable adaptive mesh refinement (AMR) software Parthenon \citep{grete:2022}, developed at LANL, and is highly performant.
+By incrementally varying the neutrino transport algorithms, these simulations will reveal systematic effects of the impact of neutirno transport on collapsar outcomes, focusing on nucleosynthesis and accretion disk dynamics.
+I will also use these simulations to study the prospects for collapsar ejecta breaking out from the stellar envelope that entombs it.
 
 The expertise at LANL, both astrophysical and computational, makes it the ideal setting to perform this study. 
 Moreover, 3D simulations are generally prohibitively computationally expensive, restricting studies such as this.
 Phoebus, being built on the highly performant AMR library Parthenon, will allow us to push the limit of computational expensive down to new levels. % this sounds weird and cheesey 
+All of this, in turn, will enable us to make predictions more faithful to the underlying physics while discerning what affects are most important in collapsar settings.
 
 % Throughout their lifetimes, stars create heavier and heavier elements in their cores, powering the spectacular views that we see in the night sky.
 % Once these stars exhaust their fuel at the ends of their lives, the heavy elements that they created are returned to the interstellar medium to enrich the next generation of stars.

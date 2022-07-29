@@ -111,27 +111,50 @@ This accounts for most of the elements up to iron.
 Above this, elements are produced by more exoxtic means.
 Chief among them is the so-called rapid neutron capture process (r-process), whose's astrophysical site of origin is still an area of active interdisciplinary study \citep{horowitz:2019}.
 It has recently been shown that the r-process occurs in the mergers of two neutron stars \citep{abbott:2017a}, but evidence suggests that another site may be needed \citep{martinez-pinedo:2014}.
-One proposed site is a collapsar -- the product of the collapse of a massive star producing a black hole in its core \citep{siegel:2019}.
+One proposed site is a collapsar \citep{siegel:2019}-- the product of the collapse of a massive star producing a black hole in its core \citep{Woosley1993, MacFadyen_1999}.
 These systems, which include a black hole inside of a massive star accreting onto it, are not so unlike the conditions present in a neutron star merger and may produce conditions amenable to forming r-process elements.
-It has been shown that, under certain assumptions, r-process elements can be formed in collapsars.
+%JMM: This sentence feels a little awkward and I ran out of space, so I cut it.
+%It has been shown that, under certain assumptions, r-process elements can be formed in collapsars.
 
 % how to say this? better to use fermions than electrons?
 Critical ingredients to any nucleosynthesis calculation are the fractions of available electrons and hadrons in the matter.
-These are governed, in part, by neutrino phsyics whose interactions modify the availabe hadrons in the matter.
-It is common in studies of collapsar nucleosynthesis to minimalize neutrino transport to a so-called leakage scheme \citep{siegel:2019}, but this trivializes the transport to a simple ``lightbulb'' and critical effects in setting the radiation field are missed.
+These are governed, in part, by neutrino phsyics whose interactions modify the available hadrons in the matter.
+It is common in studies of collapsar nucleosynthesis to minimalize neutrino transport to a so-called leakage scheme \citep{siegel:2019},
+% JMM: This is a little confusing as the lightbulb model and ray-by-ray are
+% things and different than each other and leakage.  The way leakage
+% works is that the energy and Ye in each zone have source terms from
+% emission and absorption, but there is no radiation field to set
+% them or be set by them. Rather, effective emission and absorption
+% are approximately computed by comparing the free-streaming or equilibrium
+% rates to an estimated optical depth, which is often, but not necessarily,
+% a line integral through the simulation, neglecting multi-D or GR effects.
+% but this trivializes the transport to a simple ``lightbulb'' and critical effects in setting the radiation field are missed.
+where emission and absorption are treated locally by comparing reaction rates to approximate optical depths.
+However this misses any effects radiation transport may have on the matter field, such as gravitational redshift, scattering, and multidimensional effects.
 Recently, it has been shown that higher fidelity neutrino physics may alter the nucleosynthesis and dynamics in the collapsar \citep{miller:2020}.
 However, the extent to which how and where high fidelity neutrino transport impacts the outcomes of a collapsar is still relatively uncertain.
-A systematic landscape study, varying both collapsar parameters and neutrino transport fidelity, is needed to fully understand the impacts of neutirno transport fidelity on collapsar outcomes. 
+A systematic landscape study, varying both collapsar parameters and neutrino transport fidelity, is needed to fully understand the impacts of neutirno transport fidelity on collapsar outcomes.
 
-Using the new 3D general relativistic radiation magnetohydrodynamic (GRRMHD) code Pheobus currently in development at Los Alamos National Laboratory (LANL), I will  perform a suite of collapsar simulations with varying neutrino transport implementations.
-Pheobus currently includes several transport schemes from the simple leakage scheme to a highly accurate Monte Carlo method.
-This code is built upon the performance portable adaptive mesh refinement (AMR) software Parthenon \citep{grete:2022}, developed at LANL, and is highly performant.
-By incrementally varying the neutrino transport algorithms, these simulations will reveal systematic effects of the impact of neutirno transport on collapsar outcomes, focusing on nucleosynthesis and accretion disk dynamics.
+% JMM: One thing you don't talk about here is that stellar parameters
+% matter quite a lot, and possibly swamp everything else. A big
+% challenge with Pheobus will be to vary stellar structure and initial
+% conditions. Rather than starting with a disk, we'll want to see if
+% we can make one form dynamically.
+
+Using the new 3D general relativistic radiation magnetohydrodynamic (GRRMHD) code Pheobus currently in development at Los Alamos National Laboratory (LANL), I will  perform a suite of collapsar simulations with varying neutrino transport methods and physical parameters.
+% JMM: Phoebus doesn't currently contain a leakage scheme, though it wouldn't be hard to implement one.
+Pheobus currently includes several transport schemes, including a moment method, a sophisticated Monte Carlo scheme \citep{nubhlight}, and a new hybrid method capable of spanning the range of possible optical depths \citep{MOCMC}.
+This code is built upon the performance portable adaptive mesh refinement (AMR) software Parthenon \citep{grete:2022}, developed at LANL, supports GPUs, and is highly performant.
+% JMM: I think a big science question here is also what happens when we use realistic initial conditions with GRRMHD. No one has done that yet, and we plan to.
+By running simulations with realistic initial conditions and varying the neutrino transport algorithms, these simulations will
+reveal the impact of neutrino transport and stellar structure on collapsar outcomes, focusing on nucleosynthesis and accretion disk dynamics.
 I will also use these simulations to study the prospects for collapsar ejecta breaking out from the stellar envelope that entombs it.
 
 The expertise at LANL, both astrophysical and computational, makes it the ideal setting to perform this study. 
-Moreover, 3D simulations are generally prohibitively computationally expensive, restricting studies such as this.
-Phoebus, being built on the highly performant AMR library Parthenon, will allow us to push the limit of computational expensive down to new levels. % this sounds weird and cheesey 
+During my visit, I will work with the Phoebus/Parthenon developers such as Jonah Miller, Josh Dolence, and Ben Ryan. I will also interact with the experts in supernovae and nucleosynthesis such as Chris Fryer and Matt Mumpower.
+Three-dimensional simulations are generally prohibitively computationally expensive, restricting studies such as this.
+%Phoebus, being built on the highly performant AMR library Parthenon, will allow us to push the limit of computational expensive down to new levels. % this sounds weird and cheesey 
+The performance portability of Phoebus and Parthenon will allow us to leverage the mostly untapped GPU-based HPC systems now coming online and perform 3D collapsar models at unprecedented scale.
 All of this, in turn, will enable us to make predictions more faithful to the underlying physics while discerning what affects are most important in collapsar settings.
 
 % Throughout their lifetimes, stars create heavier and heavier elements in their cores, powering the spectacular views that we see in the night sky.
@@ -149,7 +172,8 @@ All of this, in turn, will enable us to make predictions more faithful to the un
 \renewcommand\bibsection{\section*{References}}
 \setlength{\bibsep}{2pt}
 
-\bibliographystyle{abbrv}
+%\bibliographystyle{abbrv}
+\bibliographystyle{unsrt}
 \bibliography{ProjectNarrative}
 
 

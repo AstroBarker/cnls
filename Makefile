@@ -32,7 +32,4 @@ clean:
 quick:  $(SOURCE) $(FIGS) $(BIBS) .FORCE
 	@pdflatex $(SOURCE)
 
-milestones: .FORCE
-	@pdflatex incite_ccsn_milestones.tex 
-
 .FORCE:

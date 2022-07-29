@@ -142,8 +142,7 @@ A systematic landscape study, varying both collapsar parameters and neutrino tra
 % we can make one form dynamically.
 
 Using the new 3D general relativistic radiation magnetohydrodynamic (GRRMHD) code Pheobus currently in development at Los Alamos National Laboratory (LANL), I will  perform a suite of collapsar simulations with varying neutrino transport methods and physical parameters.
-% JMM: Phoebus doesn't currently contain a leakage scheme, though it wouldn't be hard to implement one.
-Pheobus currently includes several transport schemes, including a moment method, a sophisticated Monte Carlo scheme \citep{nubhlight}, and a new hybrid method capable of spanning the range of possible optical depths \citep{MOCMC}.
+Pheobus currently includes several transport schemes, ranging from simple thin cooling to a sophisticated Monte Carlo scheme \citep{nubhlight} to a new hybrid method capable of spanning the range of possible optical depths \citep{MOCMC}.
 This code is built upon the performance portable adaptive mesh refinement (AMR) software Parthenon \citep{grete:2022}, developed at LANL, supports GPUs, and is highly performant.
 % JMM: I think a big science question here is also what happens when we use realistic initial conditions with GRRMHD. No one has done that yet, and we plan to.
 By running simulations with realistic initial conditions and varying the neutrino transport algorithms, these simulations will
